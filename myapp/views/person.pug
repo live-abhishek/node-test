@@ -1,0 +1,19 @@
+extends header.pug
+
+block content
+    form(action='/person', method='post')
+        label(for="team_name") Enter Name:
+        input(id='team_name', type='text', name="name", placeholder='Enter name')
+        br
+
+        label(for="team_name") Enter age:
+        input(id='team_name', type='number', name="age", placeholder='Enter age')
+        br
+
+        input(type="submit", value="add")
+        br
+
+    if result
+        ul
+            each person in result
+                li #{person.name} , #{person.age}

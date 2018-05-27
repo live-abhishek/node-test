@@ -1,0 +1,17 @@
+extends header.pug
+
+block content
+    form(action='', method='post')
+        label(for="team_name") Enter first num:
+        input(id='team_name', type='number', name="num1", placeholder='Enter num')
+        br
+
+        label(for="team_name") Enter second num:
+        input(id='team_name', type='number', name="num2", placeholder='Enter num')
+        br
+
+        input(type="submit", value="plus")
+        input(type="submit", value="minus")
+    
+        if result
+            p result= #{result}
